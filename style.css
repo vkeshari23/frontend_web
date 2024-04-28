@@ -1,0 +1,569 @@
+:root {
+    --color: rgb(255, 255, 255);
+    --second-color: rgb(243, 188, 87);
+    --background-color: #ddd;
+  }
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    border: none;
+    font-family: "Serif";
+}
+body{
+    overflow-x: hidden;
+}
+.Hero{
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+.Hero nav{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    z-index: 1000;
+    padding-top: 2rem;
+}
+
+.Hero nav .logo{
+    margin-left: 8rem;
+}
+
+.Hero nav .logo a{
+    font-size: 2rem;
+    text-decoration: none;
+    color: var(--second-color);
+}
+
+.Hero nav .link {
+    margin-right: 8rem;
+}
+
+.Hero nav .link a{
+    margin-left: 1.8rem;
+    text-decoration: none;
+}
+
+.Hero nav .link .nav-link{
+    display: inline-flex;
+}
+.Hero nav .link select{
+    outline: none;
+    border: 0px;
+    appearance: none;
+    box-shadow: none;
+    margin-left: 1.8rem;
+    background: transparent;
+}
+
+.Hero .sliders{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+}
+
+.Hero .sliders img{
+    width: 100%;
+    height: 100vh;
+}
+
+.hero-content {
+    position: absolute;
+    bottom: 40%;
+    left: 22%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: var(--second-color);
+}
+
+.hero-content-2{
+    position: absolute;
+    bottom: 12%;
+    right: 6%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: var(--second-color);
+    font-weight: bolder;
+}
+
+.photo-gallary{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 40px,20px,0px 20px;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    z-index: 10000;
+    margin-top: 3rem;
+    overflow-y: hidden;
+}
+
+.photo-gallary .grid-photo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+    max-width: 70%;
+    margin: auto;
+    height: 100%;
+    align-items: center;
+    
+}
+
+.photo-gallary .grid-photo .column{
+    display: flex;
+    flex-direction: column;
+    width: 32.5%;
+    height: 100%;
+    overflow: hidden;
+
+}
+
+.photo-gallary .grid-photo .column img{
+    width: 100%;
+    padding-top: 15px;
+    border-radius: 5px;
+    height: 100%;
+}
+
+.container{
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    margin-top: 5rem;
+}
+
+.column{
+    flex: 1;
+    padding: 20px;
+}
+
+.text-column{
+    overflow-y: auto;
+    padding-right: 6rem;
+}
+
+.text-column .text1{
+    margin-top: 6rem;
+}
+
+.text-column .text2{
+    margin-top: 6rem;
+}
+
+.image-column{
+  position: relative;
+  overflow: hidden;
+}
+
+.image-column img{
+  width: 100%;
+  height: 70%;
+  margin-left: 8px;
+}
+
+.slider{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  bottom: 10rem;
+}
+
+.slider-controls{
+  margin: 0 10px;
+  cursor: pointer;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  margin-right: 2rem;
+}
+
+.slider-number{
+  font-size: 18px;
+}
+
+.bgImage{
+  padding: 16px;
+  background-color: var(--background-color);
+}
+
+.bg-image{
+  background-image: url('https://images.unsplash.com/photo-1522973717924-b10fe4e185cc?q=80&w=1780&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); /* Replace with your image URL */
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.overlay-text{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: var(--color);
+  font-size: 24px;
+}
+
+.text-container{
+  width: 100%;
+  height: 70vh;
+}
+
+.text-container .texts{
+  align-items: center;
+  text-align: center;
+  margin-top: 6rem;
+  margin-left: 10rem;
+  margin-right: 12rem;
+}
+
+.btnn{
+  display: flex;
+  margin-top: 12rem;
+  justify-content: center;
+}
+.btnn button{
+  background-color: black;
+  color: var(--color);
+  padding: 8px 38px;
+}
+
+#galleryContainer{
+  width: 100%;
+  height: 60vh;
+  overflow: hidden;
+  position: relative;
+}
+  
+#imageContainer{
+  display: flex;
+  flex-wrap: nowrap;
+  width: max-content;
+  gap: 1.6rem;
+  transition: transform 0.3s ease;
+  height: 70%;
+}
+  
+#imageContainer img{
+  width: calc(100% / 4);
+  height: 300px;
+  gap: 4px;
+  position: relative;
+}
+
+.slide-btnn{
+  display: flex;
+  justify-content: center;
+  gap: 10rem;
+}
+  
+.bttn{
+  font-size: 1.5em;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: var(--background-color);
+  border: none;
+  cursor: pointer;
+}
+  
+#prevButton{
+  left: 10px;
+}
+  
+#nextButton{
+  right: 10px;
+}
+
+.txt{
+  align-items: center;
+  width: 35vw;
+  height: 20vw;
+  margin: auto;
+  margin-top: 8rem;
+}
+
+.txt h6{
+  margin-left: 10rem;
+  margin-top: 5rem;
+}
+
+.column1{
+  margin-top: 0px;
+  position: relative;
+  margin-left: 8rem;
+} 
+
+
+.container1{
+  display: flex;
+  height: 60vh;
+  width: 100%;
+  margin-top: 2rem;
+  padding: 2rem;
+  position: relative;
+}
+
+.container1 .image-column1 img{
+  width: 40vw;
+  /* width: 40%; */
+  height: 100%;
+
+}
+
+
+
+.bttnn{
+  margin-left: 40rem;
+  display: flex;
+  justify-content: center;
+}
+
+.bttnn .slider-controls{
+  background-color: var(--color);
+}
+
+.advanture{
+margin-top: 4rem;
+width: auto;
+height: 100vh;
+padding: 2rem;
+}
+
+.advanture .adv-img img{
+  width: 100%;
+  height: 100vh;
+}
+
+.intro{
+  padding: 4rem;
+  display: flex;
+  justify-content: center;
+}
+
+/* ____________________________________________________________________________________________________________ */
+
+@media screen and (max-width:600px) {
+*{
+  overflow-x: hidden;
+} 
+.Hero nav .logo {
+  margin-left: 0px;
+}
+.Hero nav .logo a{
+  font-size: 28px;
+  margin-left: 0px
+}
+.Hero nav .link {
+  margin-right: 1.2px;
+}
+.Hero nav .link a{
+    margin-left: 0px;
+}
+.Hero nav .link select{
+  margin-left: 1.8px;
+}
+.hero-content {
+  text-align: center;
+  margin-left: 8rem;
+}
+
+.photo-gallary{
+  
+  margin: 0px;
+  width: 100%;
+  height: 100%;
+  margin-top: 8px;
+  overflow-y: hidden;
+}
+
+.photo-gallary .grid-photo{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 100%;
+  height: auto;
+  align-items: center;
+  
+}
+
+.photo-gallary .grid-photo .column{
+  width: 100%;
+  height: auto;
+  margin: 0px;
+}
+.photo-gallary .grid-photo .column img{
+  width: 100%;
+  padding-top: 0px;
+  border-radius: 2px;
+  height: 100%;
+  margin-top: 2px;
+}
+.container{
+  margin-top: 5px;
+}
+.column{
+  padding: 20px;
+}
+.text-column{
+  overflow-y: auto;
+  padding-right: 2rem;
+}
+.text-column .text1{
+  margin-top: 40px;
+}
+.text-column .text2{
+  margin-top: 32px;
+}
+.slider{
+bottom: 8rem;
+}
+
+
+
+
+.text-container{
+  height: 60%;
+}
+
+.text-container .texts{
+  margin-top: 2rem;
+  margin-left: 4rem;
+  margin-right: 4rem;
+}
+
+.btnn{
+  margin-top: 4rem;
+}
+
+
+
+
+
+
+
+#galleryContainer{
+  width: 100%;
+  height: 60vh;
+  
+  margin-top: 4rem;
+}
+  
+#imageContainer{
+  display: flex;
+  flex-wrap: nowrap;
+  width: max-content;
+  transition: transform 0.3s ease;
+  height: 100%;
+  gap: 0px;
+
+}
+  
+#imageContainer img{
+  width: calc(100% /1);
+  width: 100%;
+  height: auto;
+  gap: 0px;
+}
+
+.slide-btnn{
+  display: flex;
+  justify-content: center;
+  gap: 10rem;
+  margin-top: 2rem;
+}
+  
+.bttn{
+  font-size: 20px;
+  top: 0%;
+  transform: translateY(0%);
+  background-color: var(--background-color);
+
+}
+  
+#prevButton{
+  left: 0;
+  background: transparent;
+  
+}
+  
+#nextButton{
+  left: 0;
+  background: transparent;
+}
+
+
+
+.txt{
+  align-items: center;
+  width: 70vw;
+  height: 70vw;
+  margin: auto;
+  margin-top: 2rem;
+}
+.txt h6{
+  margin-left: 4rem;
+  margin-top: 3rem;
+}
+
+
+
+
+.container1{
+  height: 60vh;
+  width: 100vw;
+  margin-top: 2rem;
+  padding: 0px;
+  position: relative;
+  
+}
+
+.bttnn{
+  margin-left: 3rem;
+  display: flex;
+  justify-content: center;
+}
+
+
+
+.container1 .image-column1 img{
+  width: 60vw;
+  /* width: 40%; */
+  height: 100%;
+
+}
+.column1 .txt1, .txt2{
+  display: none;
+}
+
+.advanture{
+  margin-top: 4rem;
+  width: auto;
+  height: 60vh;
+  padding: 8px;
+  }
+  /* .advanture .adv-img{
+    width: ;
+  }
+   */
+  .advanture .adv-img img{
+    width: 100%;
+    height: 100%;
+  }
+  
+
+
+}
